@@ -3,6 +3,7 @@
 #include "AppFactory.h"
 #include "ModulesApp.h"
 #include "MooseSyntax.h"
+#include "MyPostProc.h"
 
 template<>
 InputParameters validParams<MooseapptestApp>()
@@ -45,6 +46,7 @@ extern "C" void MooseapptestApp__registerObjects(Factory & factory) { Mooseappte
 void
 MooseapptestApp::registerObjects(Factory & factory)
 {
+  registerPostprocessor(MyPostProc);
 }
 
 // External entry point for dynamic syntax association
