@@ -55,7 +55,7 @@ void State::sample(double startTime)
     }
 }
 
-double State::failTime()
+double State::failTime() 
 {
     return _failTime;
 }
